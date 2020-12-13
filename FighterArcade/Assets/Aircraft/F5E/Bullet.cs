@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class Bullet : MonoBehaviour
+public class Bullet : NetworkBehaviour
 {
     public Rigidbody rb;
 
@@ -16,7 +17,7 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Translate(Vector3.forward * 100 * Time.deltaTime);
+        transform.Translate(Vector3.forward * 200 * Time.deltaTime);
         
     }
 

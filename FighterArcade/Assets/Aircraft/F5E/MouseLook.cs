@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Cursor = UnityEngine.Cursor;
 
-public class MouseLook : MonoBehaviour
+public class MouseLook : NetworkBehaviour
 {
    public GameObject CameraRig;
    public Camera camera;
@@ -20,13 +21,22 @@ public class MouseLook : MonoBehaviour
 
    private void Start()
    {
-       Cursor.lockState = CursorLockMode.Locked;
        Freelook.SetActive(false);
+       CameraRig.SetActive(false);
 
    }
 
    private void Update()
    {
+       if (isLocalPlayer)
+       {
+           CameraRig.SetActive(true);
+
+           if (Input.GetKeyDown(KeyCode.X))
+           {
+               Cursor.lockState = CursorLockMode.None;
+           }
+       }
 
        if (Input.GetKey(KeyCode.C))
        {
@@ -53,7 +63,7 @@ public class MouseLook : MonoBehaviour
        
           if (Input.GetMouseButton(1))
           {
-              camera.fieldOfView = 45;
+              camera.fieldOfView = 30;
           }
           else
           {

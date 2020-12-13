@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6274c95e-70ec-49c1-a030-26066bb7a4fa" name="Default Changelist" comment="" />
+    <list default="true" id="6274c95e-70ec-49c1-a030-26066bb7a4fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FighterArcade/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FighterArcade/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FighterArcade/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FighterArcade/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FighterArcade/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FighterArcade/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aircraft/F5E/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aircraft/F5E/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aircraft/F5E/Missile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aircraft/F5E/Missile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aircraft/F5E/Missile/Missile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aircraft/F5E/Missile/Missile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aircraft/F5E/Missile/Missile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aircraft/F5E/Missile/Missile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aircraft/F5E/MouseLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aircraft/F5E/MouseLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aircraft/F5E/SimpleFlightV2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aircraft/F5E/SimpleFlightV2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Aircraft/F5E/bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aircraft/F5E/bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Aircraft/F5E/MouseLook.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Aircraft/F5E/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Aircraft/F5E/MouseLook.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -17,24 +51,35 @@
         <option value="$PROJECT_DIR$/Assets/Aircraft/F5E/SimpleFlight.cs" />
         <option value="$PROJECT_DIR$/Assets/Aircraft/F5E/missile.cs" />
         <option value="$PROJECT_DIR$/Assets/Aircraft/F5E/Missile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aircraft/F5E/MouseLook.cs" />
+        <option value="$PROJECT_DIR$/Assets/Aircraft/F5E/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Aircraft/F5E/SimpleFlightV2.cs" />
         <option value="$PROJECT_DIR$/Assets/Aircraft/F5E/Missile/Missile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Aircraft/F5E/Bullet.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1lX9v9tfySO0iKQNY0MgBChdi05" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Test\FighterArcade.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lolos\Documents\GitHub\plane-combat\FighterArcade\Test" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -73,6 +118,9 @@
       <workItem from="1607865764749" duration="9575000" />
       <workItem from="1607879275972" duration="91000" />
       <workItem from="1607879395487" duration="464000" />
+      <workItem from="1607880850224" duration="1838000" />
+      <workItem from="1607882953982" duration="4554000" />
+      <workItem from="1607888065073" duration="321000" />
     </task>
     <servers />
   </component>
@@ -81,10 +129,26 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1607887306353">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.-181.1920.1040/-1922.-1261.1920.1040@0.0.1920.1040" timestamp="1607887306353" />
     <state x="-1652" y="-181" width="1350" height="1027" maximized="true" key="dock-window-1" timestamp="1607820145355">
       <screen x="-1920" y="-181" width="1920" height="1040" />
     </state>

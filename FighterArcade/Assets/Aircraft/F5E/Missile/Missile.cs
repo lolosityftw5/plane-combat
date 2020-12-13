@@ -1,9 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class Missile : MonoBehaviour
+public class Missile : NetworkBehaviour
 {
     //Missile 
     public GameObject missile;
@@ -21,16 +22,18 @@ public class Missile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        FiredMissile();
+        //Missile Engine Activated and adding force
+        RpcFiredMissile();
+        missile.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 100);
     }
 
-    void FiredMissile()
+    
+    void RpcFiredMissile()
     {
         if (missile != null && isTrackingActive)
         {
-            //Missile Engine Activated and adding force
-            missile.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 100);
-            
+
+
             //Loops through all targets and determines if it meets paramaters
             GameObject[] Targets = GameObject.FindGameObjectsWithTag("Player");
             for (int i = 0; i < Targets.Length; i++)
@@ -40,11 +43,8 @@ public class Missile : MonoBehaviour
               
 
                 //if inside paramaters track target
-                if (distToTargets >= 5 && distToTargets <= 700)
+                if (distToTargets <= 1000 && delay)
                 {
-                    
-                 
-                    var target = GameObject.FindWithTag("Player");
                     missile.transform.LookAt(Targets[i].transform.position);
 
                     //if close enough detonate
@@ -68,7 +68,7 @@ public class Missile : MonoBehaviour
         yield return new WaitForSeconds(1);
         missileTrail.emitting = true;
         isTrackingActive = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(4);
         delay = true;
         yield return new WaitForSeconds(7);
         Destroy(missile);
