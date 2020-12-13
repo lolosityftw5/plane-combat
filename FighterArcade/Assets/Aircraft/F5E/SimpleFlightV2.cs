@@ -149,7 +149,11 @@ public class SimpleFlightV2 : NetworkBehaviour
             {
                missilecount--;
             }
+            
+            StartCoroutine(tag());
          }
+         
+         
 
 
          //Altitude
@@ -159,6 +163,15 @@ public class SimpleFlightV2 : NetworkBehaviour
             altitude = (int) hit.distance;
          }
       }
+   }
+
+   IEnumerator tag()
+   {
+      this.gameObject.tag = "tgt";
+      yield return new WaitForSeconds(9);
+      this.gameObject.tag = "Player";
+      StopCoroutine(tag());
+      Debug.Log("Testing");
    }
 
    private void FixedUpdate()

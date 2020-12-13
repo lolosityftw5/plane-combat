@@ -68,7 +68,7 @@ public class Missile : NetworkBehaviour
         yield return new WaitForSeconds(1);
         missileTrail.emitting = true;
         isTrackingActive = true;
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(1.5f);
         delay = true;
         yield return new WaitForSeconds(7);
         Destroy(missile);
