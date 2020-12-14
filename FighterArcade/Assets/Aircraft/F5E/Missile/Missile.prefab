@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3656021820435457876}
   - component: {fileID: 5108222331369113007}
   - component: {fileID: -8614334651774226814}
+  - component: {fileID: 9160732274683699705}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
@@ -46,7 +47,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 1
   m_AngularDrag: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -86,6 +87,22 @@ MonoBehaviour:
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
+--- !u!114 &9160732274683699705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656021820435457878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &3656021821700041140
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +245,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 50.59357, z: 2.0000105}
   m_Center: {x: -0.0000001192199, y: -7.7766237, z: 0.000000059604467}
+--- !u!65 &7346848147320576486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4210064395837875022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200, y: 200, z: 200}
+  m_Center: {x: -0.00000011920929, y: -7.776623, z: -0.0000004172325}
 --- !u!1001 &3656021820775384870
 PrefabInstance:
   m_ObjectHideFlags: 0

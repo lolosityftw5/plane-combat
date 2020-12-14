@@ -58,12 +58,17 @@ public class SimpleFlightV2 : NetworkBehaviour
 
    public bool Ability = false;
    public bool Ability1 = false;
-
+   
+   //Trails
+   public TrailRenderer Trail1;
+   public TrailRenderer Trail2;
+   
    public void Update()
    {
       //Functions
       ui();
-
+      gear();
+      trialren();
       if (isLocalPlayer)
       {
       UIManager.SetActive(true);
@@ -99,21 +104,7 @@ public class SimpleFlightV2 : NetworkBehaviour
          {
             throttle -= 1;
          }
-
-         //Gear
-         if (Input.GetKeyDown(KeyCode.G))
-         {
-            toggle = !toggle;
-
-            if (toggle)
-            {
-               Gear.SetActive(false);
-            }
-            else
-            {
-               Gear.SetActive(true);
-            }
-         }
+         
          
          //fire cannons
          
@@ -165,10 +156,43 @@ public class SimpleFlightV2 : NetworkBehaviour
       }
    }
 
+   void trialren()
+   {
+      if (isLocalPlayer)
+      {
+         if (curspeed < 20)
+         {
+            Trail1.emitting = false;
+            Trail2.emitting = false;
+         }
+         if (curspeed > 20)
+         {
+            Trail1.emitting = true;
+            Trail2.emitting = true;
+         }
+         
+      }
+   }
+   void gear()
+   {
+      if (isLocalPlayer)
+      {
+         if (altitude < 5)
+         {
+            Gear.SetActive(true);
+         }
+
+         if (altitude > 5)
+         {
+            Gear.SetActive(false);
+         }
+      }
+   }
+   
    IEnumerator tag()
    {
-      this.gameObject.tag = "tgt";
-      yield return new WaitForSeconds(9);
+      this.gameObject.tag = "na";
+      yield return new WaitForSeconds(10);
       this.gameObject.tag = "Player";
       StopCoroutine(tag());
       Debug.Log("Testing");

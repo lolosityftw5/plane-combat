@@ -16,7 +16,9 @@ public class MouseLook : NetworkBehaviour
    public GameObject Camera;
    public GameObject Freelook;
 
-
+    //toggle
+    public bool toggle = false;
+   
    
 
    private void Start()
@@ -38,14 +40,11 @@ public class MouseLook : NetworkBehaviour
            }
        }
 
-       if (Input.GetKey(KeyCode.C))
+       if (toggle)
        {
            Camera.SetActive(false);
            Freelook.SetActive(true);
-           
-          
-           
-           
+         
            
            float h = Input.GetAxis("Mouse X") * rotspeed;
            float v = Input.GetAxis("Mouse Y") * rotspeed;
@@ -53,13 +52,28 @@ public class MouseLook : NetworkBehaviour
            CameraRig.transform.Rotate(-v,h,0);
            float z = CameraRig.transform.eulerAngles.z;
            CameraRig.transform.Rotate(0,0,-z);
+
+       
        }
-       else
+
+       if (Input.GetKeyDown(KeyCode.C))
+       {
+           toggle = true;
+       }
+       if (Input.GetKeyDown(KeyCode.V))
+       {
+           toggle = false;
+       }
+
+
+       if (!toggle)
        {
            CameraRig.transform.rotation = Quaternion.Lerp(CameraRig.transform.rotation, transform.rotation, Time.deltaTime * 5);
            Camera.SetActive(true);
            Freelook.SetActive(false);
        }
+          
+       
        
           if (Input.GetMouseButton(1))
           {

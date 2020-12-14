@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Mirror;
 using UnityEngine;
 
@@ -14,7 +15,8 @@ public class Missile : NetworkBehaviour
     public float distToTargets;
     private bool delay = false;
 
-
+    //networking
+    private GameObject other;
     private void Start()
     {
         StartCoroutine(MissileActivated());
@@ -23,17 +25,15 @@ public class Missile : NetworkBehaviour
     private void FixedUpdate()
     {
         //Missile Engine Activated and adding force
-        RpcFiredMissile();
         missile.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 100);
     }
 
     
-    void RpcFiredMissile()
+    void FiredMissile()
     {
         if (missile != null && isTrackingActive)
         {
-
-
+            
             //Loops through all targets and determines if it meets paramaters
             GameObject[] Targets = GameObject.FindGameObjectsWithTag("Player");
             for (int i = 0; i < Targets.Length; i++)
@@ -43,22 +43,25 @@ public class Missile : NetworkBehaviour
               
 
                 //if inside paramaters track target
-                if (distToTargets <= 1000 && delay)
+                if (distToTargets <= 500 && delay)
                 {
                     missile.transform.LookAt(Targets[i].transform.position);
+                  
 
-                    //if close enough detonate
-                    if (distToTargets < 7 && delay)
-                    {
-                        
-                        Destroy(missile.gameObject);
-                        Destroy(Targets[i]);
-                    }
-
-
+                }
+                
+                if (distToTargets < 10 )
+                {
+                    Destroy(Targets[i]);
+                    Destroy(this.gameObject);
                 }
             }
         }
+    }
+
+    private void Update()
+    {
+        FiredMissile();
     }
 
     IEnumerator MissileActivated()
@@ -70,9 +73,12 @@ public class Missile : NetworkBehaviour
         isTrackingActive = true;
         yield return new WaitForSeconds(1.5f);
         delay = true;
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(9);
         Destroy(missile);
         StopCoroutine(MissileActivated());
 
     }
+
+
+  
 }
